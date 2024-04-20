@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Guess The Number Game</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="content-wrapper">
+            <h1>Guess The Number</h1>
+            <p class="description">We've chosen a number between 1 and 100. Try to guess it within 10 attempts. We'll let you know if your guess is high or low.</p>
+            <form>
+                <label for="guessGame">Enter guess:</label>
+                <input type="number" id="guessGame" placeholder="type in your guess..." required class="guessField" min="1" max="100">
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+            <div class="result-wrapper">
+            <p class="guesses"></p>
+            <p class="guessResult"></p>
+            <p class="lowOrHi"></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

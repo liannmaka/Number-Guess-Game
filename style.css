@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2; 
+}
+
+main {
+    background-image: url(image/guess-game-bg.jpg);
+    background-color: rgb(6, 18, 29);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.content-wrapper {
+    max-width: 40em;
+    margin: 0 30px;
+}
+
+.description {
+    font-size: 1.4rem;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+
+form label, .result-wrapper {
+    font-size: 1rem;
+}
+
+.guessField {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+    appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.guessField:disabled {
+    width: 150px;
+    cursor: not-allowed;
+    background-color: #555; 
+    color: #ccc; 
+}
+
+.submit-btn {
+    border: 2px solid #fff;
+    padding:5px 25px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    background: transparent;
+    font-weight: bold;
+}
+
+.submit-btn:disabled {
+    color: #999;
+    border: 1px solid #666; 
+    cursor: not-allowed;
+}
+
+.guessResult {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.reset-button {
+    padding: 5px 20px; 
+    background-color: rgb(12, 45, 77);
+    color: #fff;
+    border: 2px solid rgb(12, 45, 77);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+.guesses {
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 824px) {
+    body {
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+
+    .description {
+        margin: 10px 0 20px 0;
+        max-width: 100%;
+    }
+
+    .guessField {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .guessResult {
+        width: 230px;
+        margin: 10px auto;
+        padding: 5px 0;
+    }
+}
