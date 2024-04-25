@@ -44,11 +44,11 @@ form label, .result-wrapper {
 }
 
 .guessField {
-    width: 40%;
+    width: 20%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 8px;
     outline: none;
     transition: width 0.4s ease-in-out;
     appearance: textfield;
@@ -61,7 +61,7 @@ input::-webkit-inner-spin-button {
 }
 
 .guessField:disabled {
-    width: 150px;
+    width: 130px;
     cursor: not-allowed;
     background-color: #555; 
     color: #ccc; 
@@ -104,7 +104,7 @@ input::-webkit-inner-spin-button {
 }
 
 .guesses {
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 @media screen and (max-width: 824px) {
@@ -114,13 +114,13 @@ input::-webkit-inner-spin-button {
     }
 
     .description {
-        margin: 10px 0 20px 0;
+        margin: 10px 0 15px 0;
         max-width: 100%;
     }
 
     .guessField {
-        width: 50%;
-        margin-bottom: 20px;
+        width: 130px;
+        margin-bottom: 15px;
     }
 
     .guessResult {
