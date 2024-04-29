@@ -32,7 +32,7 @@ const checkGuess = () => {
     guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
     if (userGuess === randomNumber) {
-        guessResult.textContent = "Congratulations! You won";
+        guessResult.textContent = "Correct! You won";
         guessResult.style.backgroundColor = "green";
         lowOrHi.textContent = "";
         resetGame();
@@ -41,7 +41,7 @@ const checkGuess = () => {
         lowOrHi.textContent = "";
         resetGame();
     } else if (userGuess !== randomNumber) {
-        guessResult.textContent = "Wrong!! Try again";
+        guessResult.textContent = "Wrong! Try again";
         guessResult.style.backgroundColor = "red";
         if (userGuess < randomNumber) {
             lowOrHi.textContent = "User guess is low"; 
