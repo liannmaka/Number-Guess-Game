@@ -78,12 +78,12 @@ const checkGuess = () => {
         }
     }
 
-    toggleSubmitButton();
     guessCount++; 
     localStorage.setItem("guessCount", guessCount);
 
     guessField.value = "";
     guessField.focus();
+    toggleSubmitButton();
 };
 
 submitBtn.addEventListener("click", (e) => {
@@ -138,6 +138,7 @@ const restartGame = () => {
     submitBtn.setAttribute("aria-disabled", false);
 
     wrapper.removeChild(resetButton);
+    guessResult.style.backgroundColor = "transparent";  
 
     guessCount = 0;
     previousGuesses = [];
@@ -147,6 +148,5 @@ const restartGame = () => {
 
     guessField.focus();
     toggleSubmitButton();
-    randomNumber = Math.floor(Math.random() * 100) + 1;
-    guessResult.style.backgroundColor = "transparent";   
+    randomNumber = Math.floor(Math.random() * 100) + 1; 
 };
