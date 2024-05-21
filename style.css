@@ -108,6 +108,12 @@ input::-webkit-inner-spin-button {
     margin: 8px 0;
 }
 
+.error {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
 @media screen and (max-width: 824px) {
     body {
         line-height: 1.5;
