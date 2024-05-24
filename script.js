@@ -44,12 +44,22 @@ const toggleSubmitButton = () => {
     }
 };
 
-guessField.addEventListener("input", toggleSubmitButton);
+guessField.addEventListener("input", () => {
+    clearErrorMessage();
+    toggleSubmitButton();
+});
 
-toggleSubmitButton();
+
 
 const checkGuess = () => {
     let userGuess = Number (guessField.value);
+
+    if(previousGuesses.includes(userGuess)) {
+        showErrorMessage("You already guessed this number");
+        submitBtn.disabled = true;
+        submitBtn.setAttribute("aria-disabled", true); 
+        return;
+    }
 
     if (guessCount === 0) {
         guesses.textContent = "Previous guesses:";
@@ -72,9 +82,9 @@ const checkGuess = () => {
         guessResult.textContent = "Wrong! Try again";
         guessResult.style.backgroundColor = "red";
         if (userGuess < randomNumber) {
-            lowOrHi.textContent = "User guess is low"; 
+            lowOrHi.textContent = "Your guess is low"; 
         } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = "User guess is high";
+            lowOrHi.textContent = "Your guess is high";
         }
     }
 
